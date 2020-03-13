@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.wrap{ position: relative; }
+.moreImg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.contents{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.title{	position: relative;	top: 31%; }
+.enTitle{
+	font-family:'NanumSquareB';
+	position: relative;
+	font-style: italic;
+	font-size: 6em;
+	color: #fff;
+	text-align: right;
+	margin-bottom: -3.2%;
+}
+.line{
+	position: relative;
+	width: 100%;
+	border-bottom: 4px solid white;
+}
+.koTitle{
+	font-family: 'NanumSquareL';
+	font-size: 4em;
+	color: #fff;
+	position: relative;
+	text-align: right;
+}
+.explanation{
+	font-family:'NanumSquareB';
+	position: relative;
+	margin-top: 60%;
+	font-size: 2em;
+	text-align: center;
+	padding: 0 10%;
+	color: #fce7c9;
+}
