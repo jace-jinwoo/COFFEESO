@@ -1,44 +1,67 @@
 @charset "utf-8";
+@charset "utf-8";
 
-.wrap{ position: relative; }
-.moreImg{
+.blind{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0,0,0,0);
+	margin: -1px;
+	overflow: hidden;
+}
+html, body, .wrap{
+	width: 100%;
+	height: 100%;
+}
+.wrap{
+	position: relative;
+}
+.moreImg, .contents{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
-.contents{
-	position: absolute;
-	width: 100%;
-	height: 100%;
+.title{
+	position: relative;
+	top: 31%;
 	color: #000;
 }
-.title{	position: relative;	top: 31%; }
 .enTitle{
 	font-family:'NanumSquareB';
-	position: relative;
 	font-style: italic;
-	font-size: 6em;
+	font-size: 30px;
 	text-align: right;
-	margin-bottom: -3.2%;
+	padding: 0 5px;
+	margin-bottom: -5px;
 }
 .line{
-	position: relative;
 	width: 100%;
-	border-bottom: 4px solid black;
+	height: 2px;
+	background-color: #000;
 }
 .koTitle{
 	font-family: 'NanumSquareL';
-	font-size: 4em;
-	position: relative;
+	font-size: 24px;
 	text-align: right;
 }
 .description{
-	font-family:'NanumSquareB';
 	position: relative;
+	top: 35%;
 	text-align: center;
-	color: #442409;
-	padding: 0 10%;
-	margin-top: 60%;
+	padding: 0 20px;
+	background-color: #f6f2e7;
 }
-.header2{	font-size: 2.5em; }
-.explanation{ font-size: 2em; }
+.header2{
+	font-family:'NanumSquareB';
+	font-size: 20px;
+	margin-top: 15px;
+}
+.fst_header2{
+	margin: 0;
+}
+.explanation{
+	font-family:'NanumSquareB';
+	font-size: 13px;
+	color: #442409;
+	margin-top: 5px;
+}

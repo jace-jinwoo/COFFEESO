@@ -1,17 +1,7 @@
 $(document).ready(function(){
-	// 배경화면 fadeIn 처리 및 풀스크린 조정
-	$('.mainImg').fadeIn().css({
-		width: 100+'%',
-		height: 100+'%'
-	});
-
 	// Title 영역
-	$('.koTitle').animate({
-		opacity: 1
-	}, 2500);
-	$('.enTitle').animate({
-		opacity: 1
-	}, 2500);
+	$('.koTitle').fadeIn(1500);
+	$('.enTitle').fadeIn(1500);
 	$('.lLine').animate({
 		width: 26+'%'
 	}, 1800);
@@ -19,17 +9,61 @@ $(document).ready(function(){
 		width: 26+'%'
 	}, 1800);
 
-	// 캔버스, 패널, 이미지 영역
-	var screenWidth = $(window).width();
-	var imgWidth = $(window).height()*0.33+1;
-	var paddingValue = (screenWidth - imgWidth)/2;
 
-	$('.panel img').css({
-		paddingLeft: paddingValue,
-		paddingRight: paddingValue
-	});
+		// 양쪽 버튼 페이드인 효과
+		$('.btn_right').fadeIn(1500);
 
-	// 이미지 터치 슬라이드 기능
+		// 오른쪽 버튼 클릭 시
+		$('.btn_right').click(function(){
+			movePosition(1);
+			$('.panel').animate({
+				left: -nowPosition*100+'%'
+			});
+
+			if(nowPosition==4){
+				$('.btn_right').css({
+					display: 'none'
+				})
+			};
+			if(nowPosition==1){
+				$('.btn_left').css({
+					display: 'inline-block'
+				})
+			};
+			$('.header2').eq(nowPosition-1).css({
+				display: 'none'
+			});
+			$('.explanation').eq(nowPosition-1).css({
+				display: 'none'
+			});
+		});
+
+		// 왼쪽 버튼 클릭 시
+		$('.btn_left').click(function(){
+			movePosition(-1);
+			$('.panel').animate({
+				left: -nowPosition*100+'%'
+			})
+			if(nowPosition==3){
+				$('.btn_right').css({
+					display: 'inline-block'
+				})
+			};
+			if(nowPosition==0){
+				$('.btn_left').css({
+					display: 'none'
+				})
+			};
+
+			$('.header2').eq(nowPosition).css({
+				display: 'block'
+			});
+			$('.explanation').eq(nowPosition).css({
+				display: 'block'
+			});
+		});
+
+
 	var originalLeft = 0; // 처음위치
 	var oldLeft = 0; // 나중 위치
 	var nowPosition = 0; // 애니메이션 캔버스 인덱스 값
@@ -88,61 +122,9 @@ $(document).ready(function(){
 	});
 
 
-	// 오른쪽 버튼 페이드인 효과
-	$('.btn_right').fadeIn(1800);
-
-	// 오른쪽 버튼 클릭 시
-	$('.btn_right').click(function(){
-		movePosition(1);
-		$('.panel').animate({
-			left: -nowPosition*100+'%'
-		});
-
-		if(nowPosition==4){
-			$('.btn_right').css({
-				display: 'none'
-			})
-		};
-		if(nowPosition==1){
-			$('.btn_left').css({
-				display: 'inline-block'
-			})
-		};
-		$('.header2').eq(nowPosition-1).css({
-			display: 'none'
-		});
-		$('.explanation').eq(nowPosition-1).css({
-			display: 'none'
-		});
-	});
-
-	// 왼쪽 버튼 클릭 시
-	$('.btn_left').click(function(){
-		movePosition(-1);
-		$('.panel').animate({
-			left: -nowPosition*100+'%'
-		})
-		if(nowPosition==3){
-			$('.btn_right').css({
-				display: 'inline-block'
-			})
-		};
-		if(nowPosition==0){
-			$('.btn_left').css({
-				display: 'none'
-			})
-		};
-
-		$('.header2').eq(nowPosition).css({
-			display: 'block'
-		});
-		$('.explanation').eq(nowPosition).css({
-			display: 'block'
-		});
-	});
 
 	// Panel 영역
-	$('.panel img').fadeIn(1800);
+	$('.img_area img').fadeIn(1800);
 
 	// Description 영역
 	var hHeight = $('.header2').height();
@@ -150,7 +132,7 @@ $(document).ready(function(){
 	var desHight = hHeight + pHeight;
 
 	$('.description').css({
-		height: desHight+30,
+		height: desHight+10,
 		display: 'none'
 	});
 

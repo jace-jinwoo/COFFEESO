@@ -7,34 +7,21 @@
 		 url('fonts/nanumsquareb.woff') format('woff');
 }
 @font-face{
-	font-family:'NanumSquareR';
-	src: url('fonts/NanumSquareR.eot');
-	src: url('fonts/NanumSquareR.eot?#iefix') format('embedded-opentype'),
-		 url('fonts/NanumSquareR.woff') format('woff');
-}
-@font-face{
 	font-family:'NanumSquareL';
 	src: url('fonts/NanumSquareL.eot');
 	src: url('fonts/NanumSquareL.eot?#iefix') format('embedded-opentype'),
 		 url('fonts/NanumSquareL.woff') format('woff'),
 		 url('fonts/NanumSquareL.ttf') format('truetype');
 }
-*{
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, a, div{
 	margin: 0;
 	padding: 0;
+	font-size: 16px;
 }
 li{
 	list-style: none;
-}			
+}
 a{
-	text-decoration: none;	
-}
-a:link{
-	color: #fff;
-}
-.ui-content{
-	padding: 0;
-}
-h1, h2, h3, h4, h5, h6, p, li{
-	text-shadow: none;
+	text-decoration: none;
+	color: inherit;
 }

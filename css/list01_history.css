@@ -1,44 +1,56 @@
 @charset "utf-8";
 
-.wrap{ position: relative;	}
-.moreImg{
+.blind{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0,0,0,0);
+	margin: -1px;
+	overflow: hidden;
+}
+html, body, .wrap{
+	width: 100%;
+	height: 100%;
+}
+.wrap{
+	position: relative;
+}
+.moreImg, .contents{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
-.contents{
-	position: absolute;
-	width: 100%;
-	height: 100%;
+.title{
+	position: relative;
+	top: 31%;
 }
-.title{	position: relative;	top: 31%; }
 .enTitle{
 	font-family:'NanumSquareB';
-	position: relative;
 	font-style: italic;
-	font-size: 6em;
+	font-size: 30px;
 	color: #fff;
 	text-align: right;
-	margin-bottom: -3.2%;
+	padding: 0 5px;
+	margin-bottom: -5px;
 }
 .line{
-	position: relative;
 	width: 100%;
-	border-bottom: 4px solid white;
+	height: 2px;
+	background-color: #fff;
 }
 .koTitle{
 	font-family: 'NanumSquareL';
-	font-size: 4em;
+	font-size: 24px;
 	color: #fff;
-	position: relative;
 	text-align: right;
 }
 .explanation{
 	font-family:'NanumSquareB';
 	position: relative;
-	margin-top: 60%;
-	font-size: 2em;
+	top: 35%;
+	font-size: 13px;
 	text-align: center;
-	padding: 0 10%;
+	padding: 0 20px;
 	color: #fce6d4;
+	background-color: #1d0a02;
 }

@@ -2,36 +2,45 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>COFFEESO</title>
-		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
 		<script src="js/jquery-1.11.3.min.js"></script>
-		<script src="js/jquery-ui.js"></script>
-		<script src="js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/index.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script>
+		var filter = "win16|win32|win64|macintel|mac|"; // PC일 경우 가능한 값
+			if( navigator.platform){
+				if( filter.indexOf(navigator.platform.toLowerCase())<0 ){
+
+				}else{
+					alert("COFFEESO는 모바일 버전을 위한 웹입니다. 모바일 접속 또는 개발자 도구(F12)의 Toggle Device Toolbar를 이용해주시기 바랍니다.");
+				}
+			}
+		</script>
 	</head>
 
 	<!-- body 영역 시작 -->
 	<body>
 		<!-- wrap 영역 시작 -->
 		<div class="wrap">
-			<a href="main.html">
-				<img src="images/index_resize.jpg" class="splashImg" alt="햇빛과 커피잔"/>
-				<div class="cover"></div>
+			<a href="main.html" class="go_main">
+				<div class="preview">
+					<div class="cover"><span class="blind">이미지 커버</span></div>
+					<img src="images/index_resize.jpg" class="bg_image" alt="커피 배경화면" />
 
-				<!-- contents 영역 시작 -->
-				<div class="contents">
-					<h1 class="header">COFFEESO</h1>
-					<div class="line lLine"></div>
-					<div class="line rLine"></div>
+					<div class="contents">
+						<!-- <div class="title"><h1 class="blind">COFFEESO</h1></div> -->
+						<h1 class="title">COFFEESO</h1>
+						<div class="line lLine"><div class="blind">왼쪽 선</div></div>
+						<div class="line rLine"><div class="blind">오른쪽 선</div></div>
+					</div>
 				</div>
-				<!-- contents 영역 끝 -->
 			</a>
 		</div>
 		<!-- wrap 영역 끝 -->
-
 	</body>
 	<!-- body 영역 끝 -->
 </html>
